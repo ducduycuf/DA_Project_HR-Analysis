@@ -1,4 +1,4 @@
--- 3.1. Understand how career progression varies across departments and job roles.
+-- 4.1. Understand how career progression varies across departments and job roles.
 select 
 	Department,
 	JobRole,
@@ -10,7 +10,7 @@ group by Department, JobRole
 order by Department, JobRole
 
 
--- 3.2. Time to Promotion Analysis by Gender and Job Role
+-- 4.2. Time to Promotion Analysis by Gender and Job Role
 select Gender,
        JobRole,
        AVG(YearsSinceLastPromotion) AS AvgYearsToPromotion
@@ -19,7 +19,7 @@ group by Gender, JobRole
 order by Gender, JobRole;
 
 
--- 3.3. Identify different employee segments based on development needs and career aspirations.
+-- 4.3. Identify different employee segments based on development needs and career aspirations.
 with DevelopmentNeeds as (
     select
         EmployeeNumber,
