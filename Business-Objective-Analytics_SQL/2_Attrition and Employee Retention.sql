@@ -59,6 +59,7 @@ with Attrition_Rank as
 )
 select * 
 from Attrition_Rank
+where Overtime = 'Yes'
 order by Attrition_Rank
 
 
