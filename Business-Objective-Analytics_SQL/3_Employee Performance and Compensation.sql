@@ -1,4 +1,4 @@
--- 2.1. Who are the top performers, and are they being fairly compensated?
+-- 3.1. Who are the top performers, and are they being fairly compensated?
 with RankedCompensation as (
     select 
         EmployeeNumber, JobRole, MonthlyIncome, PerformanceRating, 
@@ -14,7 +14,7 @@ where
     PerformanceRank <= 5;	
 
 
--- 2.2. Which employees are at risk of leaving due to compensation, satisfaction issues?
+-- 3.2. Which employees are at risk of leaving due to compensation, satisfaction issues?
 with RiskRank as
 	(
 	select 
@@ -32,7 +32,7 @@ where RiskRank <= 10
 order by RiskRank
 
 
--- 2.3. Are high-performing employees compensated fairly compared to others in the same role?
+-- 3.3. Are high-performing employees compensated fairly compared to others in the same role?
 with RoleAvgIncome as	
 	(
 	select
@@ -61,7 +61,7 @@ join RoleAvgIncome ri on ri.Department = di.Department
 order by Department
 
 
--- 2.4. Top 10 highest-performing but underpaid employees
+-- 3.4. Top 10 highest-performing but underpaid employees
 with AvgIncomeforPerformance as	
 	(
 	select 
