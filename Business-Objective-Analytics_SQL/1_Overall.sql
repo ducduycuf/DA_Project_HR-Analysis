@@ -1,4 +1,4 @@
--- 1. How does the number of employees in high-paying roles compare to those in low-paying roles?
+-- 1.1. How does the number of employees in high-paying roles compare to those in low-paying roles?
 with SalaryCategory as
 	(
 	select 
@@ -24,7 +24,7 @@ from EmployeeCount
 order by SalaryCategory
 
 
--- 2. What is the average salary distribution by job level?
+-- 1.2. What is the average salary distribution by job level?
 --- this query finds the AvgSalary of each JobLevel and the distribution of workforce correspondingly
 with AvgSalary as
 	(
@@ -42,7 +42,7 @@ from AvgSalary
 order by JobLevel
 
 
--- 3. What is the average salary distribution by job role?
+-- 1.3. What is the average salary distribution by job role?
 with AvgSalary as
 	(
 	select 
