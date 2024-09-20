@@ -9,8 +9,6 @@ from Attrition
 group by Department, JobRole
 order by Department, JobRole
 
-select * from Attrition
-
 
 -- 3.2. Time to Promotion Analysis by Gender and Job Role
 select Gender,
