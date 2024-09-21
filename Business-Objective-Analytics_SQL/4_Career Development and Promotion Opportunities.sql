@@ -28,8 +28,8 @@ with DevelopmentNeeds as (
         JobSatisfaction,
         TrainingTimesLastYear,
         case 
-            when JobSatisfaction = 2 AND TrainingTimesLastYear < 2 then 'High Need'
-            when JobSatisfaction = 3 AND TrainingTimesLastYear < 4 then 'Medium Need'
+            when JobSatisfaction < 2 AND TrainingTimesLastYear > 4 then 'High Need'
+            when JobSatisfaction = 3 AND TrainingTimesLastYear = 4 then 'Medium Need'
             else 'Low Need'
         end as DevelopmentNeed
     from Attrition
