@@ -9,7 +9,7 @@ select
 	COUNT(case when Attrition = 'Yes' then 1 else null end) * 100.0  / COUNT(*) as Attrition_Rate
 from Attrition
 group by Age
-order by Age
+order by Attrition_Rate desc
 
 
 -- 2.3. Average attrition rate by gender
